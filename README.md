@@ -263,6 +263,9 @@
 
 - [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 - [“冰蝎”动态二进制加密网站管理客户端](https://github.com/rebeyond/Behinder)
+- PortSwigger知识点及实验环境
+  - [All learning materials](https://portswigger.net/web-security/all-materials)
+  - [All labs](https://portswigger.net/web-security/all-labs)
 
 #### Server端
 
@@ -341,10 +344,12 @@
   - [搜狗某系统存在远程EL表达式注入漏洞(命令执行)](http://www.anquan.us/static/bugs/wooyun-2016-0195845.html)
   - [工商银行某系统存在远程EL表达式注入漏洞(命令执行)](http://www.anquan.us/static/bugs/wooyun-2016-0196160.html)
 - [J2EEScan](https://github.com/ilmila/J2EEScan)
+- [Java中RMI、JNDI、LDAP、JRMP、JMX、JMS那些事儿（上）](https://paper.seebug.org/1091/)
 - JNDI注入
   - [us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE-wp](./Web%E5%BA%94%E7%94%A8/Java%20Web/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE-wp.pdf)
   - [深入理解JNDI注入与Java反序列化漏洞利用](https://www.freebuf.com/column/189835.html)
   - [如何绕过高版本JDK的限制进行JNDI注入](https://www.freebuf.com/column/207439.html)
+  - [JAVA JNDI注入知识详解](https://paper.seebug.org/1207/)
 
 ##### WebServer
 
@@ -353,30 +358,34 @@
 - [解密JBoss和Weblogic数据源连接字符串和控制台密码](http://www.vuln.cn/7068)
 
 - Tomcat
-  - CVE-2017-12616（信息泄漏）
-  - CVE-2017-12615（PUT RCE）
-  - CVE-2016-8735（反序列化 RCE）
-  - CVE-2016-1240（本地提权）
+
+  - [中间件安全-Tomcat安全测试概要](https://www.secpulse.com/archives/68746.html)
+
+
+- CVE-2017-12616（信息泄漏）
+- CVE-2017-12615（PUT RCE）
+    - CVE-2016-8735（反序列化 RCE）
+    - CVE-2016-1240（本地提权）
 
 - Resin（待整理）
-  - 未授权访问
-  - 任意文件读取
-  - 目录遍历
+    - 未授权访问
+    - 任意文件读取
+    - 目录遍历
 
 - WebLogic
 
-  - 2020待更新
-  - CVE-2019-2888（XXE）
-  - CVE-2019-2729（wls9-async反序列化RCE）
-  - CVE-2019-2725（CNVD-C-2019-48814，wls9-async反序列化RCE，[scanv-poc](./Web%E5%BA%94%E7%94%A8/Java%20Web/WebLogic/CVE-2019-2725/scanv-CVE-2019-2725.py)）
-  - CVE-2019-2647（XXE [Weblogic xxe漏洞复现及攻击痕迹分析](./Web%E5%BA%94%E7%94%A8/Java%20Web/WebLogic/CVE-2019-2647/Weblogic_xxe%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E5%8F%8A%E6%94%BB%E5%87%BB%E7%97%95%E8%BF%B9%E5%88%86%E6%9E%90_CVE-2019-2647_.pdf)）
-  - CVE-2018-3252（反序列化RCE）
-  - CVE-2018-3246（XXE）
-  - CVE-2018-2894（文件上传）
-  - CVE-2017-10271（反序列化RCE）
-  - CVE-2017-3506（反序列化RCE）
-  - CVE-2015-4852、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2018-2628、CVE-2018-2983、CVE-2018-3191、CVE-2018-3245、CVE-2020-2801、CVE-2020-2884（反序列化RCE via T3）
-  - CVE-2014-4210（SSRF）
+    - 2020待更新
+    - CVE-2019-2888（XXE）
+    - CVE-2019-2729（wls9-async反序列化RCE）
+    - CVE-2019-2725（CNVD-C-2019-48814，wls9-async反序列化RCE，[scanv-poc](./Web%E5%BA%94%E7%94%A8/Java%20Web/WebLogic/CVE-2019-2725/scanv-CVE-2019-2725.py)）
+    - CVE-2019-2647（XXE [Weblogic xxe漏洞复现及攻击痕迹分析](./Web%E5%BA%94%E7%94%A8/Java%20Web/WebLogic/CVE-2019-2647/Weblogic_xxe%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E5%8F%8A%E6%94%BB%E5%87%BB%E7%97%95%E8%BF%B9%E5%88%86%E6%9E%90_CVE-2019-2647_.pdf)）
+    - CVE-2018-3252（反序列化RCE）
+    - CVE-2018-3246（XXE）
+    - CVE-2018-2894（文件上传）
+    - CVE-2017-10271（反序列化RCE）
+    - CVE-2017-3506（反序列化RCE）
+    - CVE-2015-4852、CVE-2016-0638、CVE-2016-3510、CVE-2017-3248、CVE-2018-2628、CVE-2018-2983、CVE-2018-3191、CVE-2018-3245、CVE-2020-2801、CVE-2020-2884（反序列化RCE via T3）
+    - CVE-2014-4210（SSRF）
 
 
 - WebSphere
@@ -502,15 +511,18 @@
 
 - Drupal
 
-  - CVE-2019-6340（反序列化RCE）
-  - CVE-2018-7600、CVE-2018-7602（RCE）
-  - CVE-2017-6926（越权查看评论）
-  - CVE-2017-6920（反序列化RCE）
-  - [Drupal 7.x Service模块SQLI & RCE 漏洞分析](https://www.cnblogs.com/pa-pa-pa/p/6670411.html)
-  - [Drupal Core Full config export 配置文件未授权下载漏洞](https://www.seebug.org/vuldb/ssvid-92436)
-  - [Drupal 7.x RESTWS 模块命令执行漏洞](https://www.seebug.org/vuldb/ssvid-92174)
-  - CVE-2015-7877（SQL注入）
-  - CVE-2014-3704（SQL注入）
+  - CVE-2020-28948/28949（RCE/文件重写）
+
+
+- CVE-2019-6340（反序列化RCE）
+- CVE-2018-7600、CVE-2018-7602（RCE）
+    - CVE-2017-6926（越权查看评论）
+    - CVE-2017-6920（反序列化RCE）
+    - [Drupal 7.x Service模块SQLI & RCE 漏洞分析](https://www.cnblogs.com/pa-pa-pa/p/6670411.html)
+    - [Drupal Core Full config export 配置文件未授权下载漏洞](https://www.seebug.org/vuldb/ssvid-92436)
+    - [Drupal 7.x RESTWS 模块命令执行漏洞](https://www.seebug.org/vuldb/ssvid-92174)
+    - CVE-2015-7877（SQL注入）
+    - CVE-2014-3704（SQL注入）
 
 
 
@@ -569,19 +581,21 @@
 - Ruby on Rails
   - CVE-2019-5418（任意文件读取）
   - CVE-2018-3760（路径穿越与任意文件读取）
-
-
-- CVE-2016-2098（RCE）
-- CVE-2016-0752（RCE）
-    - CVE-2015-3224（Web Console IP 白名单绕过 RCE）
-    - CVE-2013-0333（RCE [Rails PoC exploit for CVE-2013-0333](http://ronin-ruby.github.io/blog/2013/01/28/new-rails-poc.html)）
-    - CVE-2013-3221（数据类型注入）
-    - CVE-2013-0156（RCE）
+  - CVE-2016-2098（RCE）
+  - CVE-2016-0752（RCE）
+  - CVE-2015-3224（Web Console IP 白名单绕过 RCE）
+  - CVE-2013-0333（RCE [Rails PoC exploit for CVE-2013-0333](http://ronin-ruby.github.io/blog/2013/01/28/new-rails-poc.html)）
+  - CVE-2013-3221（数据类型注入）
+  - CVE-2013-0156（RCE）
 
 
 #### Node.js
 
 - [Node.js 模块 node-serialize 反序列化任意代码执行漏洞](https://www.seebug.org/vuldb/ssvid-92674)
+- JavaScript Prototype Pollution
+  - [深入理解 JavaScript Prototype 污染攻击](https://www.leavesongs.com/PENETRATION/javascript-prototype-pollution-attack.html)
+  - [从一道CTF题看Node.js的prototype pollution attack](https://xz.aliyun.com/t/2802)
+  - [Prototype Pollution in Kibana](https://slides.com/securitymb/prototype-pollution-in-kibana)
 
 ##### 开发框架
 
@@ -671,6 +685,7 @@
 - [一篇文章带你深入理解漏洞之 XXE 漏洞](https://xz.aliyun.com/t/3357)
 - [XML实体攻击：从内网探测到命令执行步步惊心-张天琪](./Web%E5%BA%94%E7%94%A8/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B/XXE/5-XML%E5%AE%9E%E4%BD%93%E6%94%BB%E5%87%BB_%E4%BB%8E%E5%86%85%E7%BD%91%E6%8E%A2%E6%B5%8B%E5%88%B0%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%AD%A5%E6%AD%A5%E6%83%8A%E5%BF%83-%E5%BC%A0%E5%A4%A9%E7%90%AA.pdf)
 - [玩转JSON节点的Content-Type XXE攻击](https://www.secpulse.com/archives/6256.html)
+- [JAVA常见的XXE漏洞写法和防御](https://blog.spoock.com/2018/10/23/java-xxe/)
 - [XXEinjector](https://github.com/enjoiz/XXEinjector)
 
 ##### SSI
@@ -699,10 +714,10 @@
     - [你上了我的账号](./Web%E5%BA%94%E7%94%A8/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/Misc/%E4%BD%A0%E4%B8%8A%E4%BA%86%E6%88%91%E7%9A%84%E8%B4%A6%E5%8F%B7.pptx)
   - [JS敏感信息泄露：不容忽视的WEB漏洞](https://www.secpulse.com/archives/35877.html)
     - [信息收集很重要](./Web%E5%BA%94%E7%94%A8/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/Misc/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%BE%88%E9%87%8D%E8%A6%81.pdf)
-
 - [跨域方法总结](https://xz.aliyun.com/t/224)
   - JSONP
     - [JSONP安全攻防技术](http://blog.knownsec.com/2015/03/jsonp_security_technic/)
+    - [Taking down the SSO, Account Takeover in the Websites of Kolesa due to Insecure JSONP Call](https://medium.com/bugbountywriteup/taking-down-the-sso-account-takeover-in-3-websites-of-kolesa-due-to-insecure-jsonp-call-facd79732e45)
   - CORS
     - [跨域资源共享(CORS)安全性浅析](https://www.freebuf.com/articles/web/18493.html)
     - [Exploiting CORS Misconfigurations for Bitcoins and Bounties](https://portswigger.net/blog/exploiting-cors-misconfigurations-for-bitcoins-and-bounties)
@@ -728,18 +743,17 @@
 
   - [XSS Filter Evasion Cheat Sheet](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
   - [find_xss.png](./Web%E5%BA%94%E7%94%A8/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/XSS/find_xss.png)
-  - [那些年我们一起学XSS](./Web%E5%BA%94%E7%94%A8/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/XSS/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%AD%A6XSS.pdf)
-  - [先知XSS挑战赛 - L3m0n Writeup](https://mp.weixin.qq.com/s?__biz=MzI5MzY2MzM0Mw==&mid=2247484070&idx=1&sn=673e20a08d9ae6c3de60ca48110b920a&scene=21#wechat_redirect)
-  - [浅析白盒安全审计中的XSS Fliter](https://www.freebuf.com/articles/web/30201.html)
-  - [mXSS攻击的成因及常见种类](http://www.vuln.cn/6361)
-
-
-- 编码技巧
+    - [那些年我们一起学XSS](./Web%E5%BA%94%E7%94%A8/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/XSS/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%AD%A6XSS.pdf)
+    - [先知XSS挑战赛 - L3m0n Writeup](https://mp.weixin.qq.com/s?__biz=MzI5MzY2MzM0Mw==&mid=2247484070&idx=1&sn=673e20a08d9ae6c3de60ca48110b920a&scene=21#wechat_redirect)
+    - [浅析白盒安全审计中的XSS Fliter](https://www.freebuf.com/articles/web/30201.html)
+    - [mXSS攻击的成因及常见种类](http://www.vuln.cn/6361)
+  - 编码技巧
     - [XSS与字符编码的那些事儿 ——科普文](http://www.anquan.us/static/drops/tips-689.html)
     - [XSS和字符集的那些事儿](http://www.vuln.cn/6602)
-- CSP绕过
+  - CSP绕过
     - [初探CSPBypass一些细节总结](https://xz.aliyun.com/t/318)
-- 利用
+
+  - 利用
     - [小松鼠的黑魔法-XSS利用](http://bobao.360.cn/learning/detail/159.html)
     - [XSS自动化入侵内网](https://www.freebuf.com/column/133411.html)
     - [常见Flash XSS攻击方式](http://www.anquan.us/static/drops/tips-2924.html)
