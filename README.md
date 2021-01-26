@@ -166,6 +166,9 @@
 
 #### CDN寻找真实IP
 
+- [CDN 2021 完全攻击指南（一）](https://www.anquanke.com/post/id/227818)
+
+
 - 子域名未设置泛解析，检测未添加 CDN 的子域名 *详见子域名收集
 - 网站探针
 - 网站根页面响应内容中存在指纹
@@ -368,19 +371,23 @@
   - [中间件安全-Tomcat安全测试概要](https://www.secpulse.com/archives/68746.html)
 
 
-- CVE-2017-12616（信息泄漏）
-- CVE-2017-12615（PUT RCE）
+-   CVE-2017-12616（信息泄漏）
+
+-   CVE-2017-12615（PUT RCE）
     - CVE-2016-8735（反序列化 RCE）
     - CVE-2016-1240（本地提权）
 
-- Resin（待整理）
+-   Resin（待整理）
     - 未授权访问
     - 任意文件读取
     - 目录遍历
 
-- WebLogic
+-   WebLogic
 
-    - 2020待更新
+    - CVE-2021-2109（RCE）
+
+
+    - CVE-2020-13935（DoS）
     - CVE-2019-2888（XXE）
     - CVE-2019-2729（wls9-async反序列化RCE）
     - CVE-2019-2725（CNVD-C-2019-48814，wls9-async反序列化RCE，[scanv-poc](./Web%E5%BA%94%E7%94%A8/Java%20Web/WebLogic/CVE-2019-2725/scanv-CVE-2019-2725.py)）
@@ -503,6 +510,8 @@
   - [CodeIgniter框架内核设计缺陷可能导致任意代码执行](https://www.secpulse.com/archives/49197.html)
 - Yii
   - [Yii Framework Search SQL Injection Vulnerability](https://www.anquanke.com/vul/id/1046085)
+- Laravel
+  - [LARVEL <= V8.4.2 DEBUG MODE: REMOTE CODE EXECUTION](https://www.ambionics.io/blog/laravel-debug-rce)
 
 ##### 应用
 
@@ -613,14 +622,22 @@
 
 - Zimbra
   - [A Saga of Code Executions on Zimbra](https://blog.tint0.com/2019/03/a-saga-of-code-executions-on-zimbra.html)（[Zimbra xxe+ssrf导致getshell](./Web%E5%BA%94%E7%94%A8/%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8/Zimbra/Zimbra_xxe+ssrf%E5%AF%BC%E8%87%B4getshell.pdf)）
+
 - Confluence
   - CVE-2019-3396（RCE [SSTI and RCE in Confluence](./Web%E5%BA%94%E7%94%A8/%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8/Confluence/CVE-2019-3396/SSTI%20and%20RCE%20in%20Confluence.pdf)，[scanv-poc](./Web%E5%BA%94%E7%94%A8/%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8/Confluence/CVE-2019-3396/scanv-CVE-2019-3396.py)）
+
 - Exchange
-  - CVE-2018-8581
+
+  - [渗透测试中的Exchange](https://zhuanlan.zhihu.com/p/339329927)
+
+
+- CVE-2018-8581
     - [MICROSOFT EXCHANGE漏洞分析 – CVE-2018-8581](https://0kee.360.cn/blog/microsoft-exchange-cve-2018-8581/)
     - [利用 Exchange SSRF 漏洞和 NTLM 中继沦陷域控](https://paper.seebug.org/833/)
-  - CVE-2020-0688（RCE）
+- CVE-2020-0688（RCE）
     - [CVE-2020-0688_exchange漏洞复现](./Web%E5%BA%94%E7%94%A8/%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8/Exchange/CVE-2020-0688_exchange%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.pdf)
+- CVE-2020-17144（RCE）
+    - [从CVE-2020-17144看实战环境的漏洞武器化](https://mp.weixin.qq.com/s?__biz=MzI2NDk0MTM5MQ==&mid=2247483712&idx=1&sn=0b2cc3c9692f5c58a4eeb246d4b392fc&chksm=eaa5bb60ddd23276baf4cfd3fc59ca847c28f350c65ef98a17d49bc9944d653fad95dec4fd14&mpshare=1&scene=1&srcid=1209jtbQLVJIgr3VT0Ut1TM9&sharer_sharetime=1607483575995&sharer_shareid=dc9cecc79ba34e4bbb700a43a16153fd#rd)
 
 
 #### 常见漏洞类型
@@ -681,6 +698,9 @@
 - [tplmap](https://github.com/epinna/tplmap)
 
 ##### SSRF
+
+- [SSRF安全指北](https://mp.weixin.qq.com/s/EYVFHgNClgNGrk_92PZ90A)
+
 
 - [SSRF漏洞(原理&绕过姿势)](https://www.t00ls.net/articles-41070.html)
 - [利用Gopher协议拓展攻击面](https://blog.chaitin.cn/gopher-attack-surfaces/)
@@ -851,13 +871,16 @@
 
 - [新姿势之Docker Remote API未授权访问漏洞分析和利用](http://www.anquan.us/static/drops/papers-15892.html)
   - [技术讨论|通过SSRF漏洞攻击Docker远程API获取服务器Root权限](https://www.freebuf.com/articles/web/179910.html)
+
 - [Docker-LXC 原理与绕过](./%E5%85%B6%E4%BB%96/Docker/Docker-LXC_%E5%8E%9F%E7%90%86%E4%B8%8E%E7%BB%95%E8%BF%87.pdf)
+
 - Kubernetes
+
+  - [K0otkit：Hack K8s in a K8s Way](https://mp.weixin.qq.com/s/H48WNRRtlJil9uLt-O9asw)
   - [攻击容器集群管理平台](https://0x0d.im/archives/attack-container-management-platform.html)
   - [kubernetes集群渗透测试](https://www.freebuf.com/news/196993.html)
   - [Advanced Lateral Movement on Kubernetes Cluster](./其他/Docker/Advanced_Lateral_Movement_on_Kubernetes_Cluster.pdf)
   - CVE-2018-1002105（k8s特权提升）
   - [kube-hunter](https://github.com/aquasecurity/kube-hunter)
-
 
 
