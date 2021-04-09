@@ -277,6 +277,8 @@
 - Path处理
   - [Take Your Path Normalization Off And Pop 0days Out! - Orange Tsai](https://www.youtube.com/watch?reload=9&v=R_4edL7YDcg)
   - [web服务器分层架构的资源文件映射安全以及在J2EE应用中的利用与危害](https://juejin.im/post/5aa1142cf265da238f121fa4)
+  - [Attacking Secondary Contexts in Web Applications](./Web%E5%BA%94%E7%94%A8/Server%E7%AB%AF/Attacking Secondary Contexts in Web Applications.pdf)
+  - [Middleware, middleware everywhere - and lots of misconfigurations to fix](https://labs.detectify.com/2021/02/18/middleware-middleware-everywhere-and-lots-of-misconfigurations-to-fix/)
 
 
 - HTTP盲攻击
@@ -287,6 +289,7 @@
   - [HTTP Desync Attacks: Request Smuggling Reborn](https://portswigger.net/research/http-desync-attacks-request-smuggling-reborn)
   - [HTTP Desync Attacks: what happened next](https://portswigger.net/research/http-desync-attacks-what-happened-next)
   - [Breaking the chains on HTTP Request Smuggler](https://portswigger.net/research/breaking-the-chains-on-http-request-smuggler)
+  - [h2c Smuggling: Request Smuggling Via HTTP/2 Cleartext(h2c)](h2c Smuggling: Request Smuggling Via HTTP/2 Cleartext(h2c))
 - Web缓存投毒
   - [Practical Web Cache Poisoning](https://portswigger.net/research/practical-web-cache-poisoning)
   - [Bypassing Web Cache Poisoning Countermeasures](https://portswigger.net/research/bypassing-web-cache-poisoning-countermeasures)
@@ -299,6 +302,7 @@
   - [Detecting and exploiting path-relative stylesheet import (PRSSI) vulnerabilities](https://portswigger.net/research/detecting-and-exploiting-path-relative-stylesheet-import-prssi-vulnerabilities)
 - CDN
   - [CDN安全，DDos攻击](https://blog.csdn.net/sinat_38631725/article/details/107160761)
+  - [CDN安全-论文复现-RangeAmp攻击](https://www.anquanke.com/post/id/235832)
 
 ##### 组件
 
@@ -306,16 +310,24 @@
 
 
 - [解析漏洞总结](https://www.secpulse.com/archives/3750.html)
+
 - Nginx
   - [Nginx不安全配置可能导致的安全漏洞](https://www.freebuf.com/articles/web/149761.html)
   - CVE-2016-1247（本地提权）
+
 - Apache
   - CVE-2019-0211（本地提权）
+
 - IIS
   - IIS PUT
   - CVE-2017-7269（RCE）
+
 - F5
-  - CVE-2020-5902（RCE，[scanv-poc](https://gitlab.com/sfish/pt/-/blob/master/Web%E5%BA%94%E7%94%A8/Server%E7%AB%AF/F5/_f5_big_ip_rce_cve_2020_5902.py)）
+
+  - CVE-2021-22986（RCE）
+
+
+- CVE-2020-5902（RCE，[scanv-poc](https://gitlab.com/sfish/pt/-/blob/master/Web%E5%BA%94%E7%94%A8/Server%E7%AB%AF/F5/_f5_big_ip_rce_cve_2020_5902.py)）
 
 ##### 基础库
 
@@ -359,6 +371,8 @@
   - [深入理解JNDI注入与Java反序列化漏洞利用](https://www.freebuf.com/column/189835.html)
   - [如何绕过高版本JDK的限制进行JNDI注入](https://www.freebuf.com/column/207439.html)
   - [JAVA JNDI注入知识详解](https://paper.seebug.org/1207/)
+- 反序列化
+  - [ysoserial](https://github.com/frohoff/ysoserial)
 
 ##### WebServer
 
@@ -385,12 +399,13 @@
 -   WebLogic
 
     - CVE-2021-2109（RCE）
+    - CVE-2020-14882/14883（RCE）
 
 
     - CVE-2020-13935（DoS）
     - CVE-2019-2888（XXE）
     - CVE-2019-2729（wls9-async反序列化RCE）
-    - CVE-2019-2725（CNVD-C-2019-48814，wls9-async反序列化RCE，[scanv-poc](./Web%E5%BA%94%E7%94%A8/Java%20Web/WebLogic/CVE-2019-2725/scanv-CVE-2019-2725.py)）
+    - CVE-2019-2725（CNVD-C-2019-48814，wls9-async反序列化RCE）
     - CVE-2019-2647（XXE [Weblogic xxe漏洞复现及攻击痕迹分析](./Web%E5%BA%94%E7%94%A8/Java%20Web/WebLogic/CVE-2019-2647/Weblogic_xxe%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0%E5%8F%8A%E6%94%BB%E5%87%BB%E7%97%95%E8%BF%B9%E5%88%86%E6%9E%90_CVE-2019-2647_.pdf)）
     - CVE-2018-3252（反序列化RCE）
     - CVE-2018-3246（XXE）
@@ -401,14 +416,18 @@
     - CVE-2014-4210（SSRF）
 
 
-- WebSphere
+-   WebSphere
+
+    - CVE-2020-4949（XXE）
+
+
     - [Java反序列化RCE](https://www.seebug.org/vuldb/ssvid-89727)
     - CVE-2014-0823（任意文件读取）
 
-- GlassFish
+-   GlassFish
     - [任意文件读取](https://www.anquanke.com/post/id/83306)
 
-- JBoss
+-   JBoss
     - CVE-2017-12149（JBoss AS 6.x反序列化RCE）
     - [Java反序列化RCE（JMXInvokerServlet）](https://www.seebug.org/vuldb/ssvid-89723)
     - jmx-console未授权访问
@@ -417,17 +436,23 @@
 ##### 开发框架
 
 - [《Attacking Java Web》](https://www.inbreak.net/archives/477)
+
 - Spring
-  - CVE-2018-1271（Spring MVC目录遍历）
-  - CVE-2018-1270（Spring Messaging RCE）
-  - CVE-2018-1259（Spring Data集成XMLBeam XXE）
-  - CVE-2017-8046（Spring REST Data SpEL表达式注入RCE）
-  - CVE-2016-4977（Spring Security OAuth RCE）
-  - [Jndi注入及Spring RCE漏洞分析](https://www.freebuf.com/vuls/115849.html)
-  - CVE-2011-2730（Spring EL表达式执行RCE）
-  - CVE-2010-1622（Spring MVC [DOS&RCE](https://www.inbreak.net/archives/377)）
+
+  - [有趣的SpEL注入](https://xz.aliyun.com/t/9245)
+
+
+- CVE-2018-1271（Spring MVC目录遍历）
+- CVE-2018-1270（Spring Messaging RCE）
+    - CVE-2018-1259（Spring Data集成XMLBeam XXE）
+    - CVE-2017-8046（Spring REST Data SpEL表达式注入RCE）
+    - CVE-2016-4977（Spring Security OAuth RCE）
+    - [Jndi注入及Spring RCE漏洞分析](https://www.freebuf.com/vuls/115849.html)
+    - CVE-2011-2730（Spring EL表达式执行RCE）
+    - CVE-2010-1622（Spring MVC [DOS&RCE](https://www.inbreak.net/archives/377)）
+
 - Struts2
-  - s2-016、s2-019、s2-032、s2-037、s2-045、s2-046、s2-devmode（RCE）
+    - s2-016、s2-019、s2-032、s2-037、s2-045、s2-046、s2-devmode（RCE）
 
 ##### 应用
 
@@ -458,6 +483,8 @@
 - Fastjson
   - [浅谈Fastjson RCE漏洞的绕过史](https://www.freebuf.com/vuls/208339.html)
   - [Fastjson反序列化漏洞史](https://paper.seebug.org/1192/)
+  - [红队武器库:fastjson小于1.2.68全漏洞RCE利用exp复现](https://blog.csdn.net/god_zzZ/article/details/107122487)
+  - [fastjson_rce_tool](https://github.com/Hacker-One/fastjson_rce_tool)
 
 - Apache Shiro
   - 反序列化
@@ -483,6 +510,7 @@
 - [PHP Object Injection](https://owasp.org/www-community/vulnerabilities/PHP_Object_Injection)
   - [php对象注入-pop链的构造](https://www.cnblogs.com/iamstudy/articles/php_object_injection_pop_chain.html)
   - [利用phar拓展php反序列化漏洞攻击面](https://paper.seebug.org/680/)
+  - [phpggc](https://github.com/ambionics/phpggc)
 
 ##### 开发框架
 
@@ -630,15 +658,27 @@
 
   - [渗透测试中的Exchange](https://zhuanlan.zhihu.com/p/339329927)
 
+  - CVE-2018-8581
 
-- CVE-2018-8581
+
     - [MICROSOFT EXCHANGE漏洞分析 – CVE-2018-8581](https://0kee.360.cn/blog/microsoft-exchange-cve-2018-8581/)
     - [利用 Exchange SSRF 漏洞和 NTLM 中继沦陷域控](https://paper.seebug.org/833/)
+
 - CVE-2020-0688（RCE）
+
     - [CVE-2020-0688_exchange漏洞复现](./Web%E5%BA%94%E7%94%A8/%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8/Exchange/CVE-2020-0688_exchange%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0.pdf)
+
 - CVE-2020-17144（RCE）
+
     - [从CVE-2020-17144看实战环境的漏洞武器化](https://mp.weixin.qq.com/s?__biz=MzI2NDk0MTM5MQ==&mid=2247483712&idx=1&sn=0b2cc3c9692f5c58a4eeb246d4b392fc&chksm=eaa5bb60ddd23276baf4cfd3fc59ca847c28f350c65ef98a17d49bc9944d653fad95dec4fd14&mpshare=1&scene=1&srcid=1209jtbQLVJIgr3VT0Ut1TM9&sharer_sharetime=1607483575995&sharer_shareid=dc9cecc79ba34e4bbb700a43a16153fd#rd)
 
+- Proxylogon（RCE）
+
+    - [Reproducing the Microsoft Exchange Proxylogon Exploit Chain](https://www.praetorian.com/blog/reproducing-proxylogon-exploit/)
+
+
+    - [Microsoft Exchange Server CVE-2021-26855漏洞利用](https://mp.weixin.qq.com/s/iQhgQ0JkmR6pUfDxIQph1Q)
+    - [Exchange攻击链CVE-2021-26855&CVE-2021-27065分析](https://blog.csdn.net/weixin_44058342/article/details/114677966)
 
 #### 常见漏洞类型
 
@@ -705,6 +745,7 @@
 - [SSRF漏洞(原理&绕过姿势)](https://www.t00ls.net/articles-41070.html)
 - [利用Gopher协议拓展攻击面](https://blog.chaitin.cn/gopher-attack-surfaces/)
 - [build_your_ssrf_exp_autowork--20160711](./Web%E5%BA%94%E7%94%A8/%E5%B8%B8%E8%A7%81%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B/SSRF/build_your_ssrf_exp_autowork--20160711.pdf)
+- [When TLS Hacks You](https://xz.aliyun.com/t/9177)
 
 ##### XXE
 
@@ -812,6 +853,7 @@
   - Json Web Token
     - [Json Web Token历险记](https://zhuanlan.zhihu.com/p/37305980)
     - [JWT Tool](https://github.com/ticarpi/jwt_tool)
+    - [MyJWT](https://github.com/mBouamama/MyJWT)
 - 密码找回
   - [密码找回逻辑漏洞总结](http://www.anquan.us/static/drops/web-5048.html)
   - [任意用户密码重置系列](https://yangyangwithgnu.github.io/)
@@ -871,9 +913,8 @@
 
 - [新姿势之Docker Remote API未授权访问漏洞分析和利用](http://www.anquan.us/static/drops/papers-15892.html)
   - [技术讨论|通过SSRF漏洞攻击Docker远程API获取服务器Root权限](https://www.freebuf.com/articles/web/179910.html)
-
 - [Docker-LXC 原理与绕过](./%E5%85%B6%E4%BB%96/Docker/Docker-LXC_%E5%8E%9F%E7%90%86%E4%B8%8E%E7%BB%95%E8%BF%87.pdf)
-
+- [红蓝对抗中的云原生漏洞挖掘及利用实录](https://mp.weixin.qq.com/s/Aq8RrH34PTkmF8lKzdY38g)
 - Kubernetes
 
   - [K0otkit：Hack K8s in a K8s Way](https://mp.weixin.qq.com/s/H48WNRRtlJil9uLt-O9asw)
